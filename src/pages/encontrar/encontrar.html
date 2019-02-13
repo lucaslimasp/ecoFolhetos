@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Encontrar
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <form id="encontrar-form5">
+    <div id="encontrar-markdown16" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Encontre estabelecimentos, de acordo com seus parametros de busca:
+      </p>
+    </div>
+    <div id="encontrar-markdown17" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Tipo de Estabelecimento:
+      </p>
+    </div>
+    <ion-item id="encontrar-select2">
+      <ion-label></ion-label>
+      <ion-select name="tipoestabelecimento">
+        <ion-option>
+          Restaurantes
+        </ion-option>
+        <ion-option>
+          Bares
+        </ion-option>
+        <ion-option>
+          Super Mercados
+        </ion-option>
+        <ion-option>
+          Variedades
+        </ion-option>
+        <ion-option>
+          Todos
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <div class="spacer" style="height:10px;" id="encontrar-spacer4"></div>
+    <div id="encontrar-markdown18" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Tipo de Descontos:
+      </p>
+    </div>
+    <ion-item id="encontrar-select3">
+      <ion-label></ion-label>
+      <ion-select name="tipodesconto">
+        <ion-option>
+          Todos
+        </ion-option>
+        <ion-option>
+          Dinheiro
+        </ion-option>
+        <ion-option>
+          Acumulativo / Fidelidade
+        </ion-option>
+        <ion-option>
+          Brindes
+        </ion-option>
+        <ion-option>
+          beneficios
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <div class="spacer" style="height:10;" id="encontrar-spacer3"></div>
+    <div id="encontrar-markdown9" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Por nome do Estabelecimento:
+      </p>
+    </div>
+    <ion-searchbar placeholder="" name="buscanome" id="encontrar-search1"></ion-searchbar>
+    <button id="encontrar-button9" ion-button color="positive" block on-click="goToResultadoDaBusca()">
+      Encontrar
+    </button>
+  </form>
+</ion-content>

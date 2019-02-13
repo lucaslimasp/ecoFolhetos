@@ -1,0 +1,38 @@
+<ion-menu [content]="mainContent">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Menu
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content style="background:url(assets/img/WyE4RqyTQuapBfXRxjzN_background_teste1.jpg) no-repeat center;background-size:cover;background-color:#A1EB98;" id="side-menu21">
+    <ion-list id="menu-list1">
+      <ion-item color="none" menuClose="" on-click="goToProximosDeVoc()" id="menu-list-item1">
+        <ion-icon name="alert" item-left></ion-icon>
+        Proximos de Você
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToEncontrar()" id="menu-list-item2">
+        <ion-icon name="search" item-left></ion-icon>
+        Encontrar
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToDescontosObtidos()" id="menu-list-item3">
+        <ion-icon name="archive" item-left></ion-icon>
+        Descontos Obtidos
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToPerfil()" id="menu-list-item4">
+        <ion-icon name="person" item-left></ion-icon>
+        Perfil
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToQrCode()" id="menu-list-item5">
+        <ion-icon name="qr-scanner" item-left></ion-icon>
+        Qr Code
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToHome()" id="menu-list-item6">
+        Sair
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>
