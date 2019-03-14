@@ -57,7 +57,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth
+//    AngularFireAuth
   ]
 })
 export class AppModule {}
