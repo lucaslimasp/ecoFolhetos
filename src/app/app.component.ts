@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { EncontrarPage } from '../pages/encontrar/encontrar';
 import { ResultadoDaBuscaPage } from '../pages/resultado-da-busca/resultado-da-busca';
 import { DescontosObtidosPage } from '../pages/descontos-obtidos/descontos-obtidos';
@@ -11,11 +10,7 @@ import { QrCodePage } from '../pages/qr-code/qr-code';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { ProximosDeVocPage } from '../pages/proximos-de-voc/proximos-de-voc';
-
-
 import { HomePage } from '../pages/home/home';
-
-
 
 @Component({
   templateUrl: 'app.html'

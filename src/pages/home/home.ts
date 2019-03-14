@@ -13,9 +13,9 @@ export class HomePage {
   }
   goToLogin(params){
     if (!params) params = {};
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.setRoot(LoginPage);
   }goToSignup(params){
     if (!params) params = {};
-    this.navCtrl.push(SignupPage);
+    this.navCtrl.setRoot(SignupPage);
   }
 }

@@ -12,11 +12,12 @@ import { QrCodePage } from '../pages/qr-code/qr-code';
 import { ProximosDeVocPage } from '../pages/proximos-de-voc/proximos-de-voc';
 import { LogininicialPage } from '../pages/logininicial/logininicial';
 import { ResultadoDaBuscaPage } from '../pages/resultado-da-busca/resultado-da-busca';
-
-
+import { FIREBASE_CREDENTIALS } from './firebase.credentials';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+//import { firebaseConfig } from '../FirebaseConfig';
 @NgModule({
   declarations: [
     MyApp,
@@ -33,7 +34,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    //AngularFireModule.initializeApp(firebaseConfig.fire),
+    AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,7 +56,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireAuth
   ]
 })
 export class AppModule {}

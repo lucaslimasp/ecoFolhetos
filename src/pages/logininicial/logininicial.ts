@@ -12,6 +12,6 @@ export class LogininicialPage {
   }
   goToProximosDeVoc(params){
     if (!params) params = {};
-    this.navCtrl.push(ProximosDeVocPage);
+    this.navCtrl.setRoot(ProximosDeVocPage);
   }
 }

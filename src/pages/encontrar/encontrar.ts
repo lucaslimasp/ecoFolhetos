@@ -12,6 +12,6 @@ export class EncontrarPage {
   }
   goToResultadoDaBusca(params){
     if (!params) params = {};
-    this.navCtrl.push(ResultadoDaBuscaPage);
+    this.navCtrl.setRoot(ResultadoDaBuscaPage);
   }
 }
