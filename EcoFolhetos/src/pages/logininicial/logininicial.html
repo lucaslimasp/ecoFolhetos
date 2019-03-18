@@ -9,42 +9,40 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page9">
-  <form id="logininicial-form4">
     <div id="logininicial-markdown7" class="show-list-numbers-and-dots">
       <p style="color:#000000;">
         Agora precisamos saber suas preferências por estabelecimentos a receber ofertas e promoções, pode escolher mais de uma opção.
       </p>
     </div>
-    <ion-item id="logininicial-checkbox4">
-      <ion-label>
+    <ion-item>
+      <ion-label></ion-label>
+    <ion-select class="selection_button" multiple="true" placeholder="Selecione pelo menos uma opção" cancelText="Cancelar" okText="Pronto!">
+      <ion-option value="restaurantes">
         Restaurantes
-      </ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
-    <ion-item id="logininicial-checkbox5">
-      <ion-label>
+      </ion-option>
+      <ion-option value="bares">
         Bares
-      </ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
-    <ion-item id="logininicial-checkbox6">
-      <ion-label>
-        Super Mercados
-      </ion-label>
-      <ion-checkbox></ion-checkbox>
+      </ion-option>
+      <ion-option value="supermercados">
+       Super Mercados
+      </ion-option>
+      <ion-option value="variedades">
+        Lojas de variedades
+      </ion-option>
+    </ion-select>
     </ion-item>
     <div id="logininicial-markdown8" class="show-list-numbers-and-dots">
       <p style="color:#000000;">
-        Gostaria de receber notificações sempre que estiver próximo de um restaurante de sua preferência, que esteja com promoções?
+        Gostaria de receber notificações sempre que estiver próximo de um Estabelecimento de sua preferência, que esteja com promoções?
       </p>
     </div>
     <ion-item id="logininicial-select1">
       <ion-label></ion-label>
-      <ion-select name="">
-        <ion-option>
+      <ion-select class="selection_button" placeholder="Sim ou não?" cancelText="Cancelar" okText="Pronto!">
+        <ion-option value="sim">
           Sim
         </ion-option>
-        <ion-option>
+        <ion-option value="nao">
           Não
         </ion-option>
       </ion-select>
@@ -52,5 +50,4 @@
     <button id="logininicial-button6" ion-button color="positive" block on-click="goToProximosDeVoc()">
       Finalizar
     </button>
-  </form>
 </ion-content>

@@ -17,7 +17,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-//import { firebaseConfig } from '../FirebaseConfig';
+import { FirebaseConfig } from './FirebaseConfig';
 @NgModule({
   declarations: [
     MyApp,
@@ -35,7 +35,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    //AngularFireModule.initializeApp(firebaseConfig.fire),
+    AngularFireModule.initializeApp(FirebaseConfig.fire),
     AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
     AngularFireAuthModule
   ],
