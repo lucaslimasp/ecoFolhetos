@@ -1,4 +1,4 @@
-export class FirebaseService {
+/*export class FirebaseService {
 
     constructor(
         public afs: AngularFirestore
@@ -19,4 +19,4 @@ export class FirebaseService {
                 )
         })
     }
-}
+}*/
