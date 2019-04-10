@@ -1,10 +1,37 @@
 // http://ionicframework.com/docs/v2/theming/
+@font-face {
+  font-family: 'ecofolhetos';
+  src:  url('../assets/fonts/script-mt-bold/scriptmtstd-bold.otf') format('opentype');
+  font-weight: bold;
+   
+}
+.content-md {
+  color: #000;
+  background-image:url('../assets/img/fundo.png');
+  //background-color:#e6e3d4;
+}
+.content-ios {
+  color: #000;
+  background-image:url('../assets/img/fundo.png');
+ }
 
 .icon{
 padding-right: 3%;
 width:20%;
 height:auto;
 }
+.button{
+  background-color: rgb(32, 156, 21);
+  border-radius: 12px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+h1{
+  margin-left: 5%;
+  font-family: 'ecofolhetos', Bold, Bold;
+ }
 .logo-size {
     width: 60%;
     height: 60%;
@@ -14,8 +41,9 @@ height:auto;
     padding-top: 5%;
   }
   .menu{
-    background:url(assets/img/WyE4RqyTQuapBfXRxjzN_background_teste1.jpg) no-repeat center;
-    background-size:cover;
+    width: 100%;
+    height: 100%;
+    align-items: center;
     background-color:#A1EB98;
   }
   .selection_button{
@@ -23,6 +51,9 @@ height:auto;
   -webkit-padding-start:5%;
   min-width: 100%;
   }
+  .no-scroll .scroll-content{
+    overflow: hidden;
+}
   
 // App Global Sass
 // --------------------------------------------------

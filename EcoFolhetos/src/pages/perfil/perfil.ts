@@ -12,7 +12,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
   templateUrl: 'perfil.html'
 })
 export class PerfilPage {
-  user = {} as User;
+ /* user = {} as User;
   
   constructor(public navCtrl: NavController, public navParams: NavParams,private afAuth: AngularFireAuth) {
     
@@ -23,4 +23,5 @@ export class PerfilPage {
   }
  // FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
  // String uid = user.getUid();
+ */
 }
