@@ -1,0 +1,40 @@
+page-home {
+#imghome{
+position: fixed;  
+z-index: -1;
+margin-left: 10%;
+margin-top: -2%;
+width: 80%;
+height: 40%;
+align-items: center;
+}
+#home-heading1{
+    margin-top: 45%;
+    color:rgb(32, 156, 21);
+    font-weight:400;
+    font-style:italic;
+    text-align:center;
+    margin-left: 0%;
+    font-size: 7vw;
+}
+#home-heading2{
+    margin-top: 0%;
+    color:rgb(32, 156, 21);
+    font-weight:600;
+    font-style:italic;
+    text-align:center;
+    margin-left: 0%;
+    font-size: 12vw;  
+}
+#page1{
+    background-color:  #e6e3d4;
+}
+.textbackground{
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right:2%;
+    margin-bottom: 2%; 
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}

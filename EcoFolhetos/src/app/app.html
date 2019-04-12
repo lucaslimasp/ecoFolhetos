@@ -1,0 +1,45 @@
+<ion-menu persistent="true" [content]="mainContent" side="left">
+  <ion-header no-border>
+    <ion-toolbar>
+      <ion-title>
+        <img src="assets/imgs/ecoHouse.png" class="logo-size" alt="logo">
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content  id="side-menu21" class="no-scroll">
+    <ion-list id="menu-list1">
+      <ion-item color="none" menuClose="" on-click="goToProximosDeVoc()" id="menu-list-item1">
+        <ion-icon name="alert" item-left></ion-icon>
+        Proximos de Você
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToEncontrar()" id="menu-list-item2">
+        <ion-icon name="search" item-left></ion-icon>
+        Encontrar
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToDescontosObtidos()" id="menu-list-item3">
+        <ion-icon name="archive" item-left></ion-icon>
+        Descontos Obtidos
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToPerfil()" id="menu-list-item4">
+        <ion-icon name="person" item-left></ion-icon>
+        Perfil
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToQrCode()" id="menu-list-item5">
+        <ion-icon name="qr-scanner" item-left></ion-icon>
+        Qr Code
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToHome()" id="menu-list-item6">
+        Sair
+      </ion-item>
+      <!--testes-->
+      <!--
+      <ion-item color="none" menuClose="" on-click="goToInicial()" id="menu-list-item6">
+        LOGIN INICIAL TESTES + {{user_name}}
+      </ion-item>
+    -->
+    <img class="menu "src="assets/img/menuTeste2.jpg" alt="imagem"> 
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>
