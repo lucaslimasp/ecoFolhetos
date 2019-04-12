@@ -18,6 +18,9 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirebaseConfig } from './FirebaseConfig';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { FirebaseService } from '../services/FirebaseService';
+
 
 @NgModule({
   declarations: [
@@ -58,7 +61,7 @@ import { FirebaseConfig } from './FirebaseConfig';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-//    AngularFireAuth
-  ]
+    AngularFireAuth
+   ]
 })
 export class AppModule {}

@@ -1,4 +1,5 @@
 export const FirebaseConfig = {
+    production: false,
     fire: {
     apiKey: "AIzaSyCAWobTcRU7SaxLJMvXyMXKUYtimnJqdmk",
     authDomain: "boralmocar-193316.firebaseapp.com",
