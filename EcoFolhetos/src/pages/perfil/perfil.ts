@@ -1,27 +1,38 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,ToastController } from 'ionic-angular';
 import { User } from '../../shared/models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
-/*firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    console.log(user.uid);
-  }
-});*/
+import {EditarusuarioPage} from './../editarusuario/editarusuario'
+import { userProvider } from '../../provider/user/user';
+import { Observable } from 'rxjs/Observable';
+
 @Component({
   selector: 'page-perfil',
   templateUrl: 'perfil.html'
 })
 export class PerfilPage {
- /* user = {} as User;
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams,private afAuth: AngularFireAuth) {
-    
-    var user = user.username;
+  users: Observable<any>;
+ 
+  constructor(public navCtrl: NavController, private provider: userProvider, private toast: ToastController,public navParams: NavParams,private afAuth: AngularFireAuth) {
+    this.users = this.provider.getAll();
   }
-  getUser(user:User){
-   // const result = this.afAuth.user
+  editContact(users: any) {
+
+    this.navCtrl.push('EditarusuarioPage', { users:users });
   }
- // FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
- // String uid = user.getUid();
- */
+  removeContact(key: string) {
+    if (key) {
+      this.provider.remove(key)
+        .then(() => {
+          this.toast.create({ message: 'Contato removido sucesso.', duration: 3000 }).present();
+        })
+        .catch(() => {
+          this.toast.create({ message: 'Erro ao remover o contato.', duration: 3000 }).present();
+        });
+    }
+  }
+  goToeditarUsuario(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(EditarusuarioPage);
+  }
 }

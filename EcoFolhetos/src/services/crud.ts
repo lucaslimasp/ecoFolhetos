@@ -5,8 +5,8 @@ export class crud {
 
     constructor(
       public afs: AngularFirestore,
-      private FirebaseService,
-      private toastCtrl: ToastController
+      public FirebaseService:FirebaseService,
+      public toastCtrl: ToastController
     ){ }
 
 add(value){

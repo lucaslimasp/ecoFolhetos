@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler, Events } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { EncontrarPage } from '../pages/encontrar/encontrar';
@@ -18,9 +18,13 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirebaseConfig } from './FirebaseConfig';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore} from '@angular/fire/firestore';
 import { FirebaseService } from '../services/FirebaseService';
-
+import {userProvider} from '../provider/user/user';
+import {EditarusuarioPage} from '../pages/editarusuario/editarusuario';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+ 
+ //import {crud} from '../services/crud';
 
 @NgModule({
   declarations: [
@@ -34,14 +38,15 @@ import { FirebaseService } from '../services/FirebaseService';
     QrCodePage,
     ProximosDeVocPage,
     LogininicialPage,
-    ResultadoDaBuscaPage
+    ResultadoDaBuscaPage,
+    EditarusuarioPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FirebaseConfig.fire),
-    AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,13 +60,16 @@ import { FirebaseService } from '../services/FirebaseService';
     QrCodePage,
     ProximosDeVocPage,
     LogininicialPage,
-    ResultadoDaBuscaPage
+    ResultadoDaBuscaPage,
+    EditarusuarioPage
   ],
   providers: [
+    userProvider,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth
+    AngularFireAuth,
+    AngularFirestore
    ]
 })
 export class AppModule {}
