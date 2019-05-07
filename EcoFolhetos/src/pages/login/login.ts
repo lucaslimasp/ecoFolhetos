@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, NgModule, ViewChild } from '@angular/core';
+import { IonicPage,NavController, NavParams, ToastController } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
 import { User } from '../../shared/models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { ProximosDeVocPage } from '../proximos-de-voc/proximos-de-voc';
+import { userProvider } from '../../provider/user/user';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
@@ -14,8 +15,6 @@ export class LoginPage {
   }
 
   login(user: User) {
-    // Your app login API web service call triggers 
-    // this.navCtrl.push('StartPage');
     try {
       const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
       if (result) {

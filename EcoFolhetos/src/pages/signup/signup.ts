@@ -1,5 +1,5 @@
 
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, ViewChild } from '@angular/core';
 import { IonicPage,NavController, NavParams, ToastController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { User } from '../../shared/models/user';
@@ -16,7 +16,8 @@ import {passwordvalidator} from './passwordvalidator';
   })
 
 export class SignupPage {
-  public rootPage:any = SignupPage;
+  @ViewChild('myNav') nav: NavController;
+  public rootPage:any = HomePage;
   title: string;
   form: FormGroup;
   users: any;
@@ -53,7 +54,7 @@ export class SignupPage {
       this.provider.save(this.form.value)
         .then(() => {
           this.toast.create({ message: 'usuario salvo com sucesso.', duration: 3000 }).present();
-          this.navCtrl.pop();
+          this.navCtrl.setRoot(HomePage);
         })
         .catch((e) => {
           this.toast.create({ message: 'Erro ao salvar o usuario.', duration: 3000 }).present();

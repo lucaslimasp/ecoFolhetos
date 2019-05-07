@@ -37,53 +37,58 @@
       <button ion-button block id="login" (click)="signup(user)">Cadastrar</button>
     </div>
 -->
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
 <ion-list id="signup-list3">
     <ion-item>
-      <ion-label floating>Usuario</ion-label>
+      <ion-label floating for="username">Usuario</ion-label>
       <ion-input type="text" formControlName="username"></ion-input>
     </ion-item>
     <ion-item *ngIf="!form.controls.username.valid && (form.controls.username.dirty || form.controls.username.touched)" color="danger">
         <div [hidden]="!form.controls.username.errors.required">
-          O campo é obrigatório
+          O campo Usuario é obrigatório
         </div>
       </ion-item>
 
     <ion-item>
-      <ion-label floating>Email</ion-label>
+      <ion-label floating for="email">Email</ion-label>
       <ion-input type="email" formControlName="email"></ion-input>
     </ion-item>
     <ion-item *ngIf="!form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched)" color="danger">
         <div [hidden]="!form.controls.email.errors.required">
-          O campo é obrigatório
+          O campo Email é obrigatório
         </div>
       </ion-item>
 
     <ion-item>
-      <ion-label floating>Senha</ion-label>
-      <ion-input type="password" formControlName="password"></ion-input>
+      <ion-label floating for="password">Senha</ion-label>
+      <ion-input type="password" name="password" formControlName="password"></ion-input>
     </ion-item>
     <ion-item *ngIf="!form.controls.password.valid && (form.controls.password.dirty || form.controls.password.touched)" color="danger">
         <div [hidden]="!form.controls.password.errors.required">
-          O campo é obrigatório
+          O campo Senha é obrigatório
         </div>
       </ion-item>
 
     <ion-item>
-      <ion-label floating>Repita a Senha</ion-label>
-      <ion-input type="password" formControlName="repassword"></ion-input>
+      <ion-label floating for="repassword">Repita a Senha</ion-label>
+      <ion-input type="password" name="repassword" formControlName="repassword"></ion-input>
     </ion-item>
     <ion-item *ngIf="!form.controls.repassword.valid && (form.controls.repassword.dirty || form.controls.repassword.touched)" color="danger">
-        <div [hidden]="!form.controls.repassword.errors.required">
-          O campo é obrigatório
+       <div [hidden]="!form.controls.repassword.errors.required">
+          O campo Repita a Senha é obrigatório
         </div>
-        
       </ion-item>
+      <ion-item color="danger" *ngIf="form.errors?.doesMatchPassword">
+        <div >
+            A senha deve ser igual.
+          </div>
+        </ion-item>
+    
 
     </ion-list>
     
     <div padding>
-      <button ion-button block id="login" type="submit" [disabled]="!form.valid" (click)="onSubmit()">Cadastrar</button>
+      <button ion-button block id="login" type="submit" [disabled]="!form.valid">Cadastrar</button>
     </div>
   </form>
     <div id="signup-markdown6" style="text-align:center;" class="show-list-numbers-and-dots">
