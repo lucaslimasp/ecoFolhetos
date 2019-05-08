@@ -10,6 +10,22 @@
 </ion-header>
 <ion-content padding id="page6">
   <ion-card id="perfil-card25">
+      <ion-list>
+          <ion-item-sliding *ngFor="let users of users | async">
+            <ion-item>
+              <h1>{{ user.username }}</h1>
+              <p>{{ user.email }}</p>
+            </ion-item>
+            <ion-item-options side="left">
+              <button ion-button color="secondary" (click)="editContact(contact)">
+                <ion-icon name="create"></ion-icon>
+              </button>
+              <button ion-button color="danger" (click)="removeContact(contact.key)">
+                <ion-icon name="trash"></ion-icon>
+              </button>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
     <ion-list>
       <div class="lista">
         <div class="item-lista">
@@ -18,13 +34,11 @@
               </h2> 
         </div> 
         <div class="item-getlista">
-            <ion-item-sliding *ngFor="let contact of contacts | async">
-                <ion-item>
+                <ion-item *ngFor="let contact of contacts | async">
             <h2 ion-text color="primary"> 
-                {{ users.username }}
+                {{ users.email }}
               </h2> 
             </ion-item>
-          </ion-item-sliding>
           </div> 
       </div>
       <div class="lista">

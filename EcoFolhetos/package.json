@@ -27,7 +27,7 @@
     "@ionic/pro": "2.0.4",
     "@ionic/storage": "2.2.0",
     "android-versions": "^1.4.0",
-    "angularfire2": "^5.1.2",
+    "angularfire2": "~5.0.0-rc.3",
     "core-js": "^3.0.1",
     "firebase": "^5.9.3",
     "firebaseauth": "^1.0.0",

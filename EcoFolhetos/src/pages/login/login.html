@@ -10,6 +10,12 @@
 </ion-header>
 <ion-content padding id="page4">
     <ion-list id="login-list2">
+        <ion-item-sliding *ngFor="let contact of contacts | async">
+            <ion-item>
+              <h1>{{ users.username }}</h1>
+              <p>{{ users.email }}</p>
+            </ion-item>
+            </ion-item-sliding>
       <ion-item id="login-input1">
         <ion-label>
           Email

@@ -14,7 +14,6 @@ import {passwordvalidator} from './passwordvalidator';
   selector: 'page-signup',
   templateUrl: 'signup.html',
   })
-
 export class SignupPage {
   @ViewChild('myNav') nav: NavController;
   public rootPage:any = HomePage;
