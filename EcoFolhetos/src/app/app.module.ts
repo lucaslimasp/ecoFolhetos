@@ -18,7 +18,6 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirebaseConfig } from './FirebaseConfig';
-import { AngularFirestore} from '@angular/fire/firestore';
 import { FirebaseService } from '../services/FirebaseService';
 import {userProvider} from '../provider/user/user';
 import {EditarusuarioPage} from '../pages/editarusuario/editarusuario';
@@ -68,8 +67,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth,
-    AngularFirestore
+    AngularFireAuth
    ]
 })
 export class AppModule {}
