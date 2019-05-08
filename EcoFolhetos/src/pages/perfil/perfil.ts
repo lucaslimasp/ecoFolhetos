@@ -15,6 +15,7 @@ export class PerfilPage {
  
   constructor(public navCtrl: NavController, private provider: userProvider, private toast: ToastController,public navParams: NavParams,private afAuth: AngularFireAuth) {
     this.users = this.provider.getAll();
+    console.log(this.users);
   }
   editContact(users: any) {
 

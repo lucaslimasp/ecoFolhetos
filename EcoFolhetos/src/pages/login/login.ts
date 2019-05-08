@@ -20,7 +20,7 @@ export class LoginPage {
     private toast: ToastController
     ) {
       this.users = this.provider.getAll();
-      console.log(this.users);
+    
      }
      newContact() {
       this.navCtrl.push('ContactEditPage');

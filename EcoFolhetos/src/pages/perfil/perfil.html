@@ -11,22 +11,6 @@
 <ion-content padding id="page6">
   <ion-card id="perfil-card25">
       <ion-list>
-          <ion-item-sliding *ngFor="let users of users | async">
-            <ion-item>
-              <h1>{{ user.username }}</h1>
-              <p>{{ user.email }}</p>
-            </ion-item>
-            <ion-item-options side="left">
-              <button ion-button color="secondary" (click)="editContact(contact)">
-                <ion-icon name="create"></ion-icon>
-              </button>
-              <button ion-button color="danger" (click)="removeContact(contact.key)">
-                <ion-icon name="trash"></ion-icon>
-              </button>
-            </ion-item-options>
-          </ion-item-sliding>
-        </ion-list>
-    <ion-list>
       <div class="lista">
         <div class="item-lista">
             <h2 ion-text color="primary"> 
@@ -34,9 +18,9 @@
               </h2> 
         </div> 
         <div class="item-getlista">
-                <ion-item *ngFor="let contact of contacts | async">
+                <ion-item *ngFor="let user of users | async">
             <h2 ion-text color="primary"> 
-                {{ users.email }}
+                {{ user.username }}
               </h2> 
             </ion-item>
           </div> 
@@ -48,11 +32,11 @@
                 </h2>
           </div>
           <div class="item-getlista">
-              <ion-item-sliding *ngFor="let contact of contacts | async">
+              <ion-item-sliding *ngFor="let user of users | async">
                   <ion-item>
             
               <h2 ion-text color="primary"> 
-                  {{ users.email }}
+                  {{ user.email }}
                 </h2> 
               </ion-item>
             </ion-item-sliding>
@@ -66,7 +50,7 @@
     <button id="perfil-button8" style="margin-top: 3%; margin-bottom: 3%;" ion-button color="positive" on-click="goToeditarUsuario()" block>
         Editar Perfil
       </button>
-      <button id="perfil-button8" style="margin-top: 3%; margin-bottom: 3%;" ion-button color="positive" on-click="goToeditarUsuario()" block>
+      <button id="perfil-button9" style="margin-top: 3%; margin-bottom: 3%;" ion-button color="positive" on-click="goToeditarUsuario()" block>
           APAGAR CONTA
         </button>
     </ion-list>
