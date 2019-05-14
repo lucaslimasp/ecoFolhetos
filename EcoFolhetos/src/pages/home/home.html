@@ -8,7 +8,7 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding  id="page1">
+<ion-content padding  class="no-scroll">
   <img id="imghome" src="assets/imgs/folha.jpg" alt="imagem"> 
   <h1 id="home-heading1">
       Bem vindo ao
@@ -18,7 +18,7 @@
 </h1>
   <div id="home-markdown2" class="textbackground">
      
-    <p style="color:#000000;">
+    <p style="color:#000000;" class="paragrafo">
       Aqui vc poderá receber ofertas e promoções de todos os estabelecimentos próximos de você, de acordo com suas preferências. Para isto realize seu cadastro ou faça seu login e comece a aproveitar.
     </p>
   </div>
@@ -28,5 +28,11 @@
   <div class="spacer" style="height:0px;" id="home-spacer2"></div>
   <button id="home-button5" ion-button color="positive" block on-click="goToSignup()">
     Cadastrar
+  </button>
+  <div class="spacer" style="height:0px;" id="home-spacer2"></div>
+  <p style="color:#000000;"> 
+   É uma empresa? Faça seu login ou cadastro aqui:</p>
+  <button id="home-button6" ion-button color="positive" block on-click="goToEmpresa()">
+    Estabelecimento
   </button>
 </ion-content>

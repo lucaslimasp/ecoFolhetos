@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { SignupPage } from '../signup/signup';
-
+import {EstabelecimentoHomePage} from '../estabelecimento-home/estabelecimento-home'
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -17,5 +17,9 @@ export class HomePage {
   }goToSignup(params){
     if (!params) params = {};
     this.navCtrl.setRoot(SignupPage);
+  }
+  goToEmpresa(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(EstabelecimentoHomePage);
   }
 }

@@ -21,15 +21,19 @@ import { FirebaseConfig } from './FirebaseConfig';
 import {userProvider} from '../provider/user/user';
 import {EditarusuarioPage} from '../pages/editarusuario/editarusuario';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
- 
+import {EstabelecimentoHomePage} from '../pages/estabelecimento-home/estabelecimento-home'
+import {EstabelecimentoSignupPage} from '../pages/estabelecimento-signup/estabelecimento-signup'
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    EstabelecimentoHomePage,
     EncontrarPage,
     DescontosObtidosPage,
     LoginPage,
     SignupPage,
+    EstabelecimentoSignupPage,
     PerfilPage,
     QrCodePage,
     ProximosDeVocPage,
@@ -48,10 +52,12 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
   entryComponents: [
     MyApp,
     HomePage,
+    EstabelecimentoHomePage,
     EncontrarPage,
     DescontosObtidosPage,
     LoginPage,
     SignupPage,
+    EstabelecimentoSignupPage,
     PerfilPage,
     QrCodePage,
     ProximosDeVocPage,
@@ -63,6 +69,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     userProvider,
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth
    ]
