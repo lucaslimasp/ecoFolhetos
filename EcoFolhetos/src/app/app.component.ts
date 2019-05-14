@@ -66,5 +66,5 @@ export class MyApp {
   } goToInicial(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(LogininicialPage);
-  }
+  } 
 }
