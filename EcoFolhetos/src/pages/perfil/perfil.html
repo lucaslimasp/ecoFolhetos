@@ -9,50 +9,37 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page6">
+    <ion-card id="proximosDeVoc-card22">
+        <ion-list>
+          <ion-item color="none" id="proximosDeVoc-list-item13" *ngFor="let user of users | async">
+            <ion-thumbnail item-left>
+              <img src="./../../assets/imgs/perfil.jpg" alt="imagem"/>
+            </ion-thumbnail>
+            <p>
+              Usuario:  {{ user.username }}
+            </p>
+            <p>
+              Email:  {{ user.email }}
+            </p>
+            <p>Tipo: Restaurantes , Super Mercados</p>
+            <p>Promoções: Descontos, Fidelidade</p>
+            <p>Distância: 1.0 Km</p>
+            <p>Receber Notificações: Sim</p>
+
+        </ion-item>
+          <button id="perfil-button8" style="margin-top: 3%; margin-bottom: 3%;" ion-button color="positive" on-click="goToeditarUsuario()" block>
+              Editar Perfil
+            </button>
+            <button id="perfil-button9" style="margin-top: 3%; margin-bottom: 3%;" ion-button color="positive" on-click="goToeditarUsuario()" block>
+                APAGAR CONTA
+              </button>
+        </ion-list>
+      </ion-card>
+    
   <ion-card id="perfil-card25">
       <ion-list>
-      <div class="lista">
-        <div class="item-lista">
-            <h2 ion-text color="primary"> 
-                Usuario:
-              </h2> 
-        </div> 
-        <div class="item-getlista">
-                <ion-item *ngFor="let user of users | async">
-            <h2 ion-text color="primary"> 
-                {{ user.username }}
-              </h2> 
-            </ion-item>
-          </div> 
-      </div>
-      <div class="lista">
-          <div class="item-lista">
-              <h2 ion-text color="primary">
-                  Email: 
-                </h2>
-          </div>
-          <div class="item-getlista">
-              <ion-item-sliding *ngFor="let user of users | async">
-                  <ion-item>
-            
-              <h2 ion-text color="primary"> 
-                  {{ user.email }}
-                </h2> 
-              </ion-item>
-            </ion-item-sliding>
-          
-          </div> 
-        </div>
-    
-      <div style="width:100%;margin:0px 0px;background-color:#e8ebef;text-align:center;">
-        <i class="icon ion-image" style="font-size:28px;color:#888;vertical-align:middle;"> Preferências Listadas aqui</i>
-      </div>
-    <button id="perfil-button8" style="margin-top: 3%; margin-bottom: 3%;" ion-button color="positive" on-click="goToeditarUsuario()" block>
-        Editar Perfil
-      </button>
-      <button id="perfil-button9" style="margin-top: 3%; margin-bottom: 3%;" ion-button color="positive" on-click="goToeditarUsuario()" block>
-          APAGAR CONTA
-        </button>
+      
+      
     </ion-list>
   </ion-card>
 </ion-content>

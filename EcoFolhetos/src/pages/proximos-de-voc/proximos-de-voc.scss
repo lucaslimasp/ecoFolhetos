@@ -1,6 +1,16 @@
 page-proximos-de-voc {
-    .lista{
+    .item{
+        height: 100%;
+        width: 100%;
+    }
+   /* .lista{
         background-color: white;
+    }
+    .item{
+      background: gray;
+      border-width: 2px;
+      border-color: green;  
+      width: 50%;
     }
     .item-lista2{
         width: 40%;
@@ -15,5 +25,5 @@ page-proximos-de-voc {
         padding-right: 5%;
         padding-left: 55%;
         margin-top: -10%;
-      }
+      }*/
 }
