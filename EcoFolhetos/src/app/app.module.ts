@@ -21,6 +21,7 @@ import { FirebaseConfig } from './FirebaseConfig';
 import {userProvider} from '../provider/user/user';
 import {EditarusuarioPage} from '../pages/editarusuario/editarusuario';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {EstabelecimentoLoginInicialPage} from '../pages/estabelecimento-login-inicial/estabelecimento-login-inicial'
 import {EstabelecimentoHomePage} from '../pages/estabelecimento-home/estabelecimento-home'
 import {EstabelecimentoSignupPage} from '../pages/estabelecimento-signup/estabelecimento-signup'
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
@@ -28,6 +29,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
   declarations: [
     MyApp,
     HomePage,
+    EstabelecimentoLoginInicialPage,
     EstabelecimentoHomePage,
     EncontrarPage,
     DescontosObtidosPage,
@@ -52,6 +54,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
   entryComponents: [
     MyApp,
     HomePage,
+    EstabelecimentoLoginInicialPage,
     EstabelecimentoHomePage,
     EncontrarPage,
     DescontosObtidosPage,

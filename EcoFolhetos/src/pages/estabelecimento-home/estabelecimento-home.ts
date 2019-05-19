@@ -39,6 +39,11 @@ export class EstabelecimentoHomePage {
       alert("Usuario Invalido");
     }
   }
+  loginteste(params){
+    if (!params) params = {};
+        this.navCtrl.setRoot(EstabelecimentoLoginInicialPage);
+      }
+    
   goToEstabelecimentoSignup(params){
     if (!params) params = {};
     this.navCtrl.setRoot(EstabelecimentoSignupPage);
