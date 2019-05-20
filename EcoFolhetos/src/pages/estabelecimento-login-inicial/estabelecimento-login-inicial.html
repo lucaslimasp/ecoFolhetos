@@ -1,18 +1,90 @@
-<!--
-  Generated template for the EstabelecimentoLoginInicialPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>login inicial</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Definindo seu Estabelecimento
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
+<!--Tipo de Estabelecimento-->
+
+
+    <div id="logininicial-markdown7" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Agora precisamos saber mais sobre seu estabelecimento. Em qual das seguintes opções ele se enquadra?
+      </p>
+    </div>
+    <ion-item>
+      <ion-label></ion-label>
+    <ion-select class="selection_button" placeholder="Selecione pelo menos uma opção" cancelText="Cancelar" okText="Pronto!">
+      <ion-option value="restaurantes">
+        Restaurantes
+      </ion-option>
+      <ion-option value="bares">
+        Bares
+      </ion-option>
+      <ion-option value="supermercados">
+       Super Mercados
+      </ion-option>
+      <ion-option value="variedades">
+        Lojas de variedades
+      </ion-option>
+    </ion-select>
+    </ion-item>
+    <!-- Promoções / tipos -->
+    <div id="logininicial-markdown8" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Quais tipos de promoções dos Estabelecimentos gostaria de visualizar?
+      </p>
+    </div>
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-select class="selection_button" multiple="true" placeholder="Selecione pelo menos uma opção" cancelText="Cancelar" okText="Pronto!">
+        <ion-option value="descontos">
+          Descontos
+        </ion-option>
+        <ion-option value="brindes">
+          Brindes
+        </ion-option>
+        <ion-option value="acumulativos">
+          Acumulativos
+        </ion-option>
+     </ion-select>
+    </ion-item>
+    <!--Distancia dos estabelecimentos-->
+    <div id="logininicial-markdown8" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Até qual distância gostaria de visualizar e receber notificações(se habilitado) de Estabelecimentos próximos(em Metros)?
+      </p>
+    </div>
+  <ion-item>
+    <ion-range min="500" max="10000" step="500" snaps="true" color="secondary" pin="true" name="atedistancia">
+      <ion-label size="small" slot="start" name="sunny">100</ion-label>
+      <ion-label size="" slot="end">5000</ion-label>
+    </ion-range>
+  </ion-item>
+    <!--Receber notificações?-->
+    <div id="logininicial-markdown8" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        Gostaria de receber notificações sempre que estiver próximo de um Estabelecimento de sua preferência?
+      </p>
+    </div>
+    <ion-item id="logininicial-select1">
+      <ion-label></ion-label>
+      <ion-select class="selection_button" placeholder="Sim ou não?" cancelText="Cancelar" okText="Pronto!">
+        <ion-option value="sim">
+          Sim
+        </ion-option>
+        <ion-option value="nao">
+          Não
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <button id="logininicial-button6" ion-button color="positive" block on-click="goToProximosDeVoc()">
+      Finalizar
+    </button>
 
 </ion-content>

@@ -12,6 +12,9 @@ import { SignupPage } from '../pages/signup/signup';
 import { ProximosDeVocPage } from '../pages/proximos-de-voc/proximos-de-voc';
 import { HomePage } from '../pages/home/home';
 import {LogininicialPage} from '../pages/logininicial/logininicial';
+import{EstabelecimentoPerfilPage} from '../pages/estabelecimento-perfil/estabelecimento-perfil';
+import{EstabelecimentoGerarQrCodePage} from '../pages/estabelecimento-gerar-qr-code/estabelecimento-gerar-qr-code';
+import{EstabelecimentoAddConteudoPage} from '../pages/estabelecimento-add-conteudo/estabelecimento-add-conteudo';
 
 @Component({
   templateUrl: 'app.html'
@@ -66,5 +69,15 @@ export class MyApp {
   } goToInicial(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(LogininicialPage);
+  } 
+  goToEstabelecimentoPerfil(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(EstabelecimentoPerfilPage);
+  } goToAddDescontos(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(EstabelecimentoAddConteudoPage);
+  } goToGerarQrCode(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(EstabelecimentoGerarQrCodePage);
   } 
 }

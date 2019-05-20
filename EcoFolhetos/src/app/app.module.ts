@@ -25,6 +25,10 @@ import {EstabelecimentoLoginInicialPage} from '../pages/estabelecimento-login-in
 import {EstabelecimentoHomePage} from '../pages/estabelecimento-home/estabelecimento-home'
 import {EstabelecimentoSignupPage} from '../pages/estabelecimento-signup/estabelecimento-signup'
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import {EstabelecimentoPerfilPage} from '../pages/estabelecimento-perfil/estabelecimento-perfil'
+import{EstabelecimentoGerarQrCodePage} from '../pages/estabelecimento-gerar-qr-code/estabelecimento-gerar-qr-code';
+import{EstabelecimentoAddConteudoPage} from '../pages/estabelecimento-add-conteudo/estabelecimento-add-conteudo';
+import{EstabelecimentoVerpromocoesPage} from '../pages/estabelecimento-verpromocoes/estabelecimento-verpromocoes';
 @NgModule({
   declarations: [
     MyApp,
@@ -33,6 +37,10 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     EstabelecimentoHomePage,
     EncontrarPage,
     DescontosObtidosPage,
+    EstabelecimentoPerfilPage,
+    EstabelecimentoGerarQrCodePage,
+    EstabelecimentoAddConteudoPage,
+    EstabelecimentoVerpromocoesPage,
     LoginPage,
     SignupPage,
     EstabelecimentoSignupPage,
@@ -54,8 +62,12 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
   entryComponents: [
     MyApp,
     HomePage,
+    EstabelecimentoGerarQrCodePage,
+    EstabelecimentoAddConteudoPage,
     EstabelecimentoLoginInicialPage,
+    EstabelecimentoPerfilPage,
     EstabelecimentoHomePage,
+    EstabelecimentoVerpromocoesPage,
     EncontrarPage,
     DescontosObtidosPage,
     LoginPage,
