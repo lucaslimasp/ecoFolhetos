@@ -22,7 +22,7 @@
     </div>
     <ion-item id="encontrar-select2">
       <ion-label></ion-label>
-      <ion-select name="tipoestabelecimento">
+      <ion-select name="tipoestabelecimento" class="selection_button" placeholder="Selecione uma opção" cancelText="Cancelar" okText="Pronto!">
         <ion-option>
           Restaurantes
         </ion-option>
@@ -48,14 +48,14 @@
     </div>
     <ion-item id="encontrar-select3">
       <ion-label></ion-label>
-      <ion-select name="tipodesconto">
+      <ion-select name="tipodesconto" class="selection_button" placeholder="Selecione uma opção" cancelText="Cancelar" okText="Pronto!">
         <ion-option>
           Todos
         </ion-option>
         <ion-option>
           Dinheiro
         </ion-option>
-        <ion-option>
+        <ion-option value="Acumulativo / Fidelidade">
           Acumulativo / Fidelidade
         </ion-option>
         <ion-option>
@@ -72,7 +72,7 @@
         Por nome do Estabelecimento:
       </p>
     </div>
-    <ion-searchbar placeholder="" name="buscanome" id="encontrar-search1"></ion-searchbar>
+    <ion-searchbar placeholder="Nome do Estabelecimento" name="buscanome" id="encontrar-search1"></ion-searchbar>
     <button id="encontrar-button9" ion-button color="positive" block on-click="goToResultadoDaBusca()">
       Encontrar
     </button>

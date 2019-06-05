@@ -27,7 +27,7 @@ export class SignupPage {
     private toast:ToastController,
     private formBuilder: FormBuilder,
     public navParams: NavParams, 
-    private afAuth: AngularFireAuth,
+    private afAuth: AngularFireAuth
      ) {
       this.users = this.navParams.data.users || { };
       this.createForm();
