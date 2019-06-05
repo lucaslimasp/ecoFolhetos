@@ -11,6 +11,9 @@
     "lint": "ionic-app-scripts lint"
   },
   "dependencies": {
+    "@ionic-native/facebook": "^3.13.1",
+    "@ionic-native/google-plus": "^3.12.1",
+    "@ionic-native/twitter-connect": "^4.0.0",
     "@angular/animations": "5.2.11",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",

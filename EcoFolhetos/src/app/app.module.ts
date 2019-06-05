@@ -21,7 +21,19 @@ import { FirebaseConfig } from './FirebaseConfig';
 import {userProvider} from '../provider/user/user';
 import {EditarusuarioPage} from '../pages/editarusuario/editarusuario';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
- 
+import {AuthService} from '../provider/auth/auth-service';
+import { ContactService } from '../provider/contact-service/contact-service';
+import { GooglePlus } from '@ionic-native/google-plus';
+import { Facebook } from '@ionic-native/facebook';
+import { TwitterConnect } from '@ionic-native/twitter-connect';
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { SigninPage } from '../pages/newpages/signin/signin';
+import { SigninWithEmailPage } from '../pages//newpages/signinwithemail/signinwithemail';
+import { ResetpasswordPage } from '../pages/newpages/resetpassword/resetpassword';
+import { EditContatosPage } from '../pages/newpages/edit-contatos/edit-contatos';
+import { ContatosPage } from '../pages/newpages/contatos/contatos';
+import { UsuarioPage } from '../pages/newpages/usuario/usuario';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -35,7 +47,13 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ProximosDeVocPage,
     LogininicialPage,
     ResultadoDaBuscaPage,
-    EditarusuarioPage
+    EditarusuarioPage,
+    SigninPage,
+    SigninWithEmailPage,
+    ResetpasswordPage,
+    EditContatosPage,
+    ContatosPage,
+    UsuarioPage
   ],
   imports: [
     BrowserModule,
@@ -57,14 +75,27 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ProximosDeVocPage,
     LogininicialPage,
     ResultadoDaBuscaPage,
-    EditarusuarioPage
+    EditarusuarioPage,
+    SigninPage,
+    SigninWithEmailPage,
+    ResetpasswordPage,
+    EditContatosPage,
+    ContatosPage,
+    UsuarioPage
   ],
   providers: [
     userProvider,
+    AuthService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth
+    AngularFireAuth,
+    AuthService,
+    ContactService,
+    ImagePicker,
+    GooglePlus,
+    Facebook,
+    TwitterConnect,
    ]
 })
 export class AppModule {}

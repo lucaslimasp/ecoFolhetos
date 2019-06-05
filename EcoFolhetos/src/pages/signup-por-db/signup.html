@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+        {{ title }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+  <!--
+     <ion-list id="signup-list3">
+    <ion-item>
+      <ion-label floating>Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Regita a Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="user.repassword"></ion-input>
+    </ion-item>
+    
+    </ion-list>
+    
+    <div padding>
+      <button ion-button block id="login" (click)="signup(user)">Cadastrar</button>
+    </div>
+-->
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<ion-list id="signup-list3">
+    <ion-item>
+      <ion-label floating for="username">Usuario</ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.username.valid && (form.controls.username.dirty || form.controls.username.touched)" color="danger">
+        <div [hidden]="!form.controls.username.errors.required">
+          O campo Usuario é obrigatório
+        </div>
+      </ion-item>
+
+    <ion-item>
+      <ion-label floating for="email">Email</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched)" color="danger">
+        <div [hidden]="!form.controls.email.errors.required">
+          O campo Email é obrigatório
+        </div>
+      </ion-item>
+
+    <ion-item>
+      <ion-label floating for="password">Senha</ion-label>
+      <ion-input type="password" name="password" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.password.valid && (form.controls.password.dirty || form.controls.password.touched)" color="danger">
+        <div [hidden]="!form.controls.password.errors.required">
+          O campo Senha é obrigatório
+        </div>
+      </ion-item>
+
+    <ion-item>
+      <ion-label floating for="repassword">Repita a Senha</ion-label>
+      <ion-input type="password" name="repassword" formControlName="repassword"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.repassword.valid && (form.controls.repassword.dirty || form.controls.repassword.touched)" color="danger">
+       <div [hidden]="!form.controls.repassword.errors.required">
+          O campo Repita a Senha é obrigatório
+        </div>
+      </ion-item>
+      <ion-item color="danger" *ngIf="form.errors?.doesMatchPassword">
+        <div >
+            A senha deve ser igual.
+          </div>
+        </ion-item>
+    
+
+    </ion-list>
+    
+    <div padding>
+      <button ion-button block id="login" type="submit" [disabled]="!form.valid">Cadastrar</button>
+    </div>
+  </form>
+    <div id="signup-markdown6" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#000000;font-size:15px;">
+        Ou Cadastrar com:
+      </p>
+    </div>
+    <img class="icon" src="assets/img/TudClaC8SlSM4f468JDm_icon_facebook.png" href="#" />
+    <img class="icon" src="assets/img/HJiBidFSi66fTcyVQwMW_icon_google_plus.png" href="#" />
+    <img class="icon" src="assets/img/4LZAZEFvSIaROGy7g3x3_icon_twitter.png" href="#" />
+</ion-content>
